@@ -16,28 +16,11 @@ void draw() {
   blue = constrain(blue, 0, 255);
   thickness = constrain(thickness, 1, 500);
   
-   
-  stroke (0,0,0);
-  noFill();
-  pushMatrix();
-  if (brushshape.equals("CIRCULAR")) {
-      circle(mouseX, mouseY, thickness);
-    } else if (brushshape.equals("RHOMBUS")) {
-      beginShape();
-      vertex(mouseX, mouseY - thickness / 2);
-      vertex(mouseX - thickness / 2, mouseY);
-      vertex(mouseX, mouseY + thickness / 2);
-      vertex(mouseX + thickness / 2, mouseY);
-      endShape(CLOSE);
-    } else if (brushshape.equals("RECTANGLE")) {
-      rect(mouseX - thickness / 2, mouseY - thickness / 2, thickness, thickness);
-    }
-    popMatrix();
-
+//Dibuixar 
   stroke(red, green, blue);
   fill(red, green, blue);
   rect(1820, 0, 100, 100);
-
+//Forma del pinzell//
   if (mousePressed && isdrawmodeon) {
     if (brushshape.equals("CIRCULAR")) {
       circle(mouseX, mouseY, thickness);
@@ -54,9 +37,11 @@ void draw() {
   }
 
   if (keyPressed) {
+    //Reset//
     if (keyCode == SHIFT) {
       background(255);
     }
+    //Canviar Color//
     if (key == 'r') {
       red += 3;
     } else if (key == 'g') {
@@ -82,7 +67,7 @@ void draw() {
     }
   }
   textFont(font);
-  
+
 }
 
 
@@ -90,6 +75,7 @@ void draw() {
 
 void keyPressed() {
   if (key == ' ') {
+    //Canvia mode de dibuix
     isdrawmodeon = !isdrawmodeon;
     if (isdrawmodeon){
       fill(0);
