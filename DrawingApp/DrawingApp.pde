@@ -2,10 +2,12 @@ int red = 0, green = 0, blue = 0;
 boolean isdrawmodeon = false;
 int thickness = 5;
 String brushshape = "CIRCULAR";
+PFont font;
 
 void setup() {
   size(1920, 1080);
   background(255);
+  font = createFont("Straw Milky.otf",50);
 }
 
 void draw() {
@@ -13,6 +15,24 @@ void draw() {
   green = constrain(green, 0, 255);
   blue = constrain(blue, 0, 255);
   thickness = constrain(thickness, 1, 500);
+  
+   
+  stroke (0,0,0);
+  noFill();
+  pushMatrix();
+  if (brushshape.equals("CIRCULAR")) {
+      circle(mouseX, mouseY, thickness);
+    } else if (brushshape.equals("RHOMBUS")) {
+      beginShape();
+      vertex(mouseX, mouseY - thickness / 2);
+      vertex(mouseX - thickness / 2, mouseY);
+      vertex(mouseX, mouseY + thickness / 2);
+      vertex(mouseX + thickness / 2, mouseY);
+      endShape(CLOSE);
+    } else if (brushshape.equals("RECTANGLE")) {
+      rect(mouseX - thickness / 2, mouseY - thickness / 2, thickness, thickness);
+    }
+    popMatrix();
 
   stroke(red, green, blue);
   fill(red, green, blue);
@@ -61,10 +81,21 @@ void draw() {
       brushshape = "RECTANGLE";
     }
   }
+  textFont(font);
+  
 }
+
+
+
 
 void keyPressed() {
   if (key == ' ') {
     isdrawmodeon = !isdrawmodeon;
+    if (isdrawmodeon){
+      fill(0);
+    } else {
+      fill(255);
+    }
+    text("ON",1700,60);
   }
 }
