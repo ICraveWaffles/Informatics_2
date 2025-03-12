@@ -1,0 +1,21 @@
+Controls:
+
+Espai: activar-desactivar mode de dibuix
+r-g-b: augmentar el valor de vermell, verd i blau respectivament
+R-G-B: disminuir el valor de vermell, verd i blau respectivamente (Utilitza el bloq mayus)
+Shift: esborrar el canvas
+1-2-3: canviar forma del pinzell a cercle, quadrat a 45º i quadrat respectivamente
+Click + mode de dibuix activat per dibuixar
+Q-E: disminuir i augmentar la gruixa del pinzell
+
+UI:
+
+Mode de dibuix activat-desactivat
+Requadre amb el color seleccionat
+
+
+Propostes de millora:
+-Més tipus de pinzells
+-Cursor que mostri la mida i forma del pinzell
+-Més elements a la UI com la mida i forma del pinzell (exclusius mutuament)
+-Millora dels controls de color (Color picker?)
