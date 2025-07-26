@@ -1,0 +1,20 @@
+Controls:
+
+LEFT: moure a l'esquerra.
+RIGHT: moure a la dreta
+DOWN: moure abaix
+UP: moure directament abaix
+
+A/D: rotar en sentit positiu-negatiu
+W: emmagatzemar figura / utilitzar figura emmagatzemada
+
+Millores:
+
+-Possibilitat d'emmagatzemar figures.
+-Millores de físiques quan es rota a prop de parets.
+-4 figures més, totes les combinacions de figures amb 3 quadrats o menys.
+
+Canvis en el programari:
+
+-Les matrius son tridimensionals, per simular les rotacions de cada figura.
+-El joc es penja quan perds amb un NullPointerException. Simplement increible.
