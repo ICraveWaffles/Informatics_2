@@ -1,0 +1,6 @@
+Mecànica: tres projectils per ronda, cadascuna més petita que l'anterior.
+
+
+Per disparar, simplemente s'ha de clickar en una posició i serà llençada en funció de la seva distància al projectil i la seva mida.
+
+Cadascun dels projectils pot rebotar fins a dues vegades.
